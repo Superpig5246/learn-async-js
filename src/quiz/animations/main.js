@@ -13,6 +13,15 @@ const aliceTumbling = [
   const alice2 = document.querySelector("#alice2");
   const alice3 = document.querySelector("#alice3");
 
+  async function animateAlice() {
+    await alice1.animate(aliceTumbling, aliceTiming).finished
+    await alice2.animate(aliceTumbling, aliceTiming).finished
+    await alice3.animate(aliceTumbling, aliceTiming).finished
+  }
+
+  animateAlice()
+
+  /*
   alice1
     .animate(aliceTumbling, aliceTiming)
     .finished
@@ -26,7 +35,7 @@ const aliceTumbling = [
                 alice3.animate(aliceTumbling, aliceTiming);
             })
     });
-
+ */
   // Promise chain  
   // alice1.animate(aliceTumbling, aliceTiming).finished  
   //   .then(() => {
